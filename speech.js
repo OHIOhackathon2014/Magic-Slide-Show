@@ -9,7 +9,7 @@ recognition.interimResults = true;
 //recognition.lang = "en";
 
 recognition.onresult = function (event) {
-	alert("WE got result!");
+	//alert("WE got result!");
 	var transcript = '';
 	for (var i = event.resultIndex; i < event.results.length; ++i) {
       if (event.results[i].isFinal) {

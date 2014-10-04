@@ -213,6 +213,9 @@ function addTest(){
 
 
 function MSS_add(data){
+	if(data==null)
+		return;
+		
   wordList.push(data);
   $("#fs").fadeOut("fast",function(){
       document.getElementById('slide-title').innerHTML=data.title;

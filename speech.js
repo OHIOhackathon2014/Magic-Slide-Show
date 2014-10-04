@@ -12,7 +12,7 @@ var detecting = false;
 var ignore_onend;
 var start_timestamp;
 if (!('webkitSpeechRecognition' in window)) {
-  upgrade();
+  MSS_alert("Error: you web browser did not support webkid Speech Recognition! Please switch to newlest Google Chrome");
 } else {
   start_button.style.display = 'inline-block';
   var recognition = new webkitSpeechRecognition();

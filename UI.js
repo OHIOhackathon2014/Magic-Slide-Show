@@ -197,20 +197,6 @@ function MSS_btn_toggle(){
 	}
 	
 }
-function addTest(){	
-  var titleData = ["Alogrithm","Artificial Intelligence","Application Program Interface","Google","Computer Science"];
-  var puncData  = ["qvewgrg","wef gegrgg","dsbdfyn ersrg rthrt","dxbd","drgsd rthrtcb"];
-  var expenData = ["Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.","Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.","Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.","Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.","Some Person said: Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong."];
- 
-  var index = Math.floor((Math.random() * titleData.length)); 
-  var data = new Object();
-  data.title = titleData[index];
-  data.punc  = puncData[index];
-  data.expen = expenData[index];
-  data.link_url = "http://google.com";
-  MSS_add(data);
-}
-
 
 function MSS_add(data){
 	if(data==null)
@@ -218,7 +204,7 @@ function MSS_add(data){
 		
   wordList.push(data);
   $("#fs").fadeOut("fast",function(){
-      document.getElementById('slide-title').innerHTML=data.title;
+      document.getElementById('slide-title').innerHTML=capitalizeEachWord(data.title);
  	  document.getElementById('slide-punc').innerHTML=data.punc;
 	  document.getElementById('slide-expen').innerHTML=data.expen; 
  	  document.getElementById("slide-link").setAttribute('href',data.link_url);
@@ -234,7 +220,11 @@ function MSS_add(data){
   li.innerHTML = data.title;
   document.getElementById('wordList').appendChild(li);
 }
-
+function capitalizeEachWord(str) {
+    return str.replace(/\w\S*/g, function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
 function MSS_disp_list(){
 	//MSS_alert(wordList);
 }

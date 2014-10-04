@@ -4,7 +4,7 @@ This js file used to do the word analyzation
 Maintainer:Kimr Yang
 */
 
-var output = [];
+
 var p=1;
 var words=["computer science"];
 var explanations=["Computer science is the scientific and practical approach to computation and its applications."]

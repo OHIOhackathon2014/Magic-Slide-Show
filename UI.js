@@ -1,3 +1,4 @@
+/*
 // Variables
 var create_email = false;
 var final_transcript = '';
@@ -146,7 +147,7 @@ function showInfo(s) {
   } else {
     info.style.visibility = 'hidden';
   }
-}
+}*/
 /* init variable and action*/
 var wordList = [];
 var isRecording = false;

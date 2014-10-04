@@ -155,6 +155,14 @@ $(document).ready(function(){
 document.getElementById('btn').onclick=MSS_btn_toggle;
 document.getElementById('all').onclick=MSS_all;
 document.getElementById('alert').onclick=MSS_dismiss_alert;
+
+
+
+setInterval(function(){
+	MSS_add(output.pop());
+},2);
+
+
 });
 function MSS_dismiss_alert(){
 	var e = document.getElementById('alert');

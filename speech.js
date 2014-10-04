@@ -30,16 +30,7 @@ recognition.onerror = function(event) {
 	MSS_btn_toggle();	
 	
 }
- recognition.onsoundstart = function() {
-    
-    showInfo('sound_detected');
-
-  };
-  
-  recognition.onstart = function() {
-    
-  };
-
+ 
 
 /*
 var create_email=false;

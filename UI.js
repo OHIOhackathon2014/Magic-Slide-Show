@@ -174,7 +174,7 @@ function MSS_dismiss_alert(){
 function MSS_all(){
 	var text = "Your Word List is : \n";
 	for(var temp in wordList){
-		text+=wordList[temp].expen + "\n";
+		text+=wordList[temp].title + "\n";
 	}
 	alert(text)	;
 	

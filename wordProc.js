@@ -60,7 +60,7 @@ for(var i=0;i<pointer;i=i+2)
 			var dataObj = new Object();
 			dataObj.title = str1;
 			dataObj.punc = "";
-			dataObj.expan = explanations[address];
+			dataObj.expen = explanations[address];
 			dataObj.link_url = links[address];
             
         }

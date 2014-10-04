@@ -9,22 +9,17 @@ recognition.interimResults = true;
 //recognition.lang = "en";
 
 recognition.onresult = function (event) {
-	alert("WE got result!");
+	//alert("WE got result!");
 	var transcript = '';
 	for (var i = event.resultIndex; i < event.results.length; ++i) {
-      if (event.results[i].isFinal) {
         transcript += event.results[i][0].transcript;
-		var dtemp = new Object();
-		dtemp.title = "new transcript!";
-		dtemp.punc  = "punc";
-		dtemp.expen = transcript;
-		dtemp.link_url = "google.com";
-		MSS_add(dtemp);
-      } else {
-        transcript += event.results[i][0].transcript;
-      }
     }
-	
+	var dtemp = new Object();
+	dtemp.title = "new transcript!";
+	dtemp.punc  = "punc";
+	dtemp.expen = transcript;
+	dtemp.link_url = "google.com";
+	MSS_add(dtemp);
 };
 recognition.onerror = function(event) {
 	alert("Speech Error:"+event.error);

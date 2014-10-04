@@ -15,7 +15,7 @@ recognition.onresult = function (event) {
 	var interim_transcript = '';
 	for (var i = event.resultIndex; i < event.results.length; ++i) {
          if (event.results[i].isFinal) {
-        final_transcript += event.results[i][0].transcript;
+        final_transcript += event.results[i][0].transcript+"||";
 		var dtemp = new Object();
 		dtemp.title = "new transcript!";
 		dtemp.punc  = "punc";
@@ -24,7 +24,7 @@ recognition.onresult = function (event) {
 		MSS_add(dtemp);
       } else {
         interim_transcript += event.results[i][0].transcript;
-		document.getElementById("intem").innerHTML=interim_transcript;
+		document.getElementById("intem").innerHTML=interim_transcript+"||";
       }
     }
 	

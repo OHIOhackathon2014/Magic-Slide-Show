@@ -6,7 +6,7 @@ Maintainer:Sophy Chen
 var recognition = new webkitSpeechRecognition();
 recognition.continuous = true;
 recognition.interimResults = true;
-recognition.lang = "cmn-Hans-CN";
+recognition.lang = "yue-Hant-HK";
 
 recognition.onresult = function (event) {
 	//alert("WE got result!");

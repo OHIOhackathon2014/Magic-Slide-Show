@@ -6,7 +6,7 @@ Maintainer:Sophy Chen
 var recognition = new webkitSpeechRecognition();
 recognition.continuous = true;
 recognition.interimResults = true;
-recognition.lang = "yue-Hant-HK";
+recognition.lang = "en";
 
 recognition.onresult = function (event) {
 	//alert("WE got result!");
@@ -24,6 +24,7 @@ recognition.onresult = function (event) {
 		MSS_add(dtemp);
       } else {
         interim_transcript += event.results[i][0].transcript;
+		document.getElementById("intem").innerHTML=interim_transcript;
       }
     }
 	

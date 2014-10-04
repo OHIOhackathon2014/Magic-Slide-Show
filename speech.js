@@ -16,16 +16,17 @@ recognition.onresult = function (event) {
 	for (var i = event.resultIndex; i < event.results.length; ++i) {
          if (event.results[i].isFinal) {
         final_transcript += event.results[i][0].transcript;
+		var dtemp = new Object();
+		dtemp.title = "new transcript!";
+		dtemp.punc  = "punc";
+		dtemp.expen = final_transcript;
+		dtemp.link_url = "google.com";
+		MSS_add(dtemp);
       } else {
         interim_transcript += event.results[i][0].transcript;
       }
     }
-	var dtemp = new Object();
-	dtemp.title = "new transcript!";
-	dtemp.punc  = "punc";
-	dtemp.expen = final_transcript;
-	dtemp.link_url = "google.com";
-	MSS_add(dtemp);
+	
 };
 recognition.onerror = function(event) {
 	alert("Speech Error:"+event.error);

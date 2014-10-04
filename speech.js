@@ -6,18 +6,24 @@ Maintainer:Sophy Chen
 var recognition = new webkitSpeechRecognition();
 recognition.continuous = true;
 recognition.interimResults = true;
-//recognition.lang = "en";
+recognition.lang = "cmn-Hans-CN";
 
 recognition.onresult = function (event) {
 	//alert("WE got result!");
 	var transcript = '';
+	var final_transcript = '';
+	var interim_transcript = '';
 	for (var i = event.resultIndex; i < event.results.length; ++i) {
-        transcript += event.results[i][0].transcript;
+         if (event.results[i].isFinal) {
+        final_transcript += event.results[i][0].transcript;
+      } else {
+        interim_transcript += event.results[i][0].transcript;
+      }
     }
 	var dtemp = new Object();
 	dtemp.title = "new transcript!";
 	dtemp.punc  = "punc";
-	dtemp.expen = transcript;
+	dtemp.expen = final_transcript;
 	dtemp.link_url = "google.com";
 	MSS_add(dtemp);
 };

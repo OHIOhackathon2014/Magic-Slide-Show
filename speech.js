@@ -25,6 +25,7 @@ recognition.onresult = function (event) {
       } else {
         interim_transcript += event.results[i][0].transcript;
 		document.getElementById("intem").innerHTML=interim_transcript+"||";
+		
       }
     }
 	

@@ -23,14 +23,14 @@ if (!('webkitSpeechRecognition' in window)) {
   recognition.onsoundstart = function() {
     detecting = true;
     showInfo('sound_detected');
-//    start_img.src = '/intl/en/chrome/assets/common/images/content/mic-animate.gif';
+
   };
   
   recognition.onstart = function() {
     if(detecting){
     recognizing = true;
     showInfo('info_speak_now');
-//    start_img.src = '/intl/en/chrome/assets/common/images/content/mic-animate.gif';
+
     }
   };
   
@@ -42,7 +42,7 @@ if (!('webkitSpeechRecognition' in window)) {
       ignore_onend = true;
     }
     if (event.error == 'audio-capture') {
-//      start_img.src = '/intl/en/chrome/assets/common/images/content/mic.gif';
+
       showInfo('info_no_microphone');
       ignore_onend = true;
     }
@@ -74,7 +74,7 @@ if (!('webkitSpeechRecognition' in window)) {
   recognition.onend = function() {
     if (!detecting){
     recognizing = false;  
-//    start_img.src = '/intl/en/chrome/assets/common/images/content/mic.gif';
+
     }
     if (!final_transcript) {
       showInfo('info_start');

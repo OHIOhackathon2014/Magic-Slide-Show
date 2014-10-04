@@ -3,6 +3,46 @@ This is the speech api used to do the ditation and return the result.
 Maintainer:Sophy Chen
 */
 
+var recognition = new webkitSpeechRecognition();
+recognition.continuous = true;
+recognition.interimResults = true;
+//recognition.lang = "en";
+
+recognition.onresult = function (event) {
+	alert("WE got result!");
+	var transcript = '';
+	for (var i = event.resultIndex; i < event.results.length; ++i) {
+      if (event.results[i].isFinal) {
+        transcript += event.results[i][0].transcript;
+		var dtemp = new Object();
+		dtemp.title = "new transcript!";
+		dtemp.punc  = "punc";
+		dtemp.expen = transcript;
+		dtemp.link_url = "google.com";
+		MSS_add(dtemp);
+      } else {
+        transcript += event.results[i][0].transcript;
+      }
+    }
+	
+};
+recognition.onerror = function(event) {
+	alert("Speech Error:"+event.error);
+	MSS_btn_toggle();	
+	
+}
+ recognition.onsoundstart = function() {
+    
+    showInfo('sound_detected');
+
+  };
+  
+  recognition.onstart = function() {
+    
+  };
+
+
+/*
 var create_email=false;
 var share_media = false;
 var print = false;
@@ -142,3 +182,4 @@ function capitalize(s) {
 }
 
 
+*/

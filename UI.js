@@ -160,9 +160,7 @@ document.getElementById('alert').onclick=MSS_dismiss_alert;
 
 
 
-setInterval(function(){
-	MSS_add(output.pop());
-},2);
+
 
 
 });

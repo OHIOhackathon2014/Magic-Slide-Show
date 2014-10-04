@@ -62,9 +62,9 @@ for(var i=0;i<pointer;i=i+2)
 			dataObj.punc = "";
 			dataObj.expan = explanations[address];
 			dataObj.link_url = links[address];
-            output.add(dataObj);
+            
         }
     }
 }
-
+MSS_add(dataObj);
 }

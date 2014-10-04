@@ -1,0 +1,72 @@
+/*
+style css controls the view style of website
+*/
+
+/* full screen */
+div:-webkit-full-screen {
+  width: 100% !important;
+  height:100% !important;
+}
+div:-moz-full-screen {
+  width: 100% !important;
+  height:100% !important;
+}
+div:-ms-fullscreen {
+  width: 100% !important;
+  height:100% !important;
+}
+div:fullscreen {
+  width: 100% !important;
+  height:100% !important;
+}
+
+/* While in fullscreen, hide any children with class 'tohide' */
+:-webkit-full-screen .tohide {
+  display: none;
+}
+:-moz-full-screen .tohide {
+  display: none;
+}
+:-ms-fullscreen .tohide {
+  display: none;
+}
+:fullscreen .tohide {
+  display: none;
+}
+
+:-webkit-full-screen h1{
+	font-size:128px;
+}
+:-moz-full-screen h1{
+	font-size:128px;
+}
+:-ms-fullscreen h1{
+	font-size:128px;
+}
+:fullscreen h1{
+	font-size:128px;
+}
+:-webkit-full-screen p{
+	font-size:32px;
+}
+:-moz-full-screen p{
+	font-size:32px;
+}
+:-ms-fullscreen p{
+	font-size:32px;
+}
+:fullscreen p{
+	font-size:32px;
+}
+:-webkit-full-screen h4{
+	font-size:18px;
+}
+:-moz-full-screen h4{
+	font-size:18px;
+}
+:-ms-fullscreen h4{
+	font-size:18px;
+}
+:fullscreen h4{
+	font-size:18px;
+}

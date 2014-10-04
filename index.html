@@ -15,9 +15,7 @@
         <link rel="stylesheet" href="clear.css"/>
         <link rel="stylesheet" href="style.css"/>
         
-        <script src="speech.js"></script>
-        <script src="UI.js"></script>
-        <script src="wordProc.js"></script>
+        
     </head>
 <body>
 <div class="container">
@@ -33,40 +31,41 @@
       </div>
     </div>
     <!-- Main  -->
-    <div class="row">
+    <div class="row" id="fs-container">
     	<!-- Main Screen  -->
-    	<div id="mainScreen" class="col-md-10">
-        	<div class="jumbotron">
-              <h1>Computer Science123</h1>
-              <h4>[kuh m-pyoo-ter [sahy-uh ns]]</h4>
-              <p>Computer science is the scientific and practical approach to computation and its applications. It is the systematic study of the feasibility, structure, expression, and mechanization of the methodical procedures (or algorithms) that underlie the acquisition, representation, processing, storage, communication of, and access to information, whether such information is encoded as bits in a computer memory or transcribed in genes and protein structures in a biological cell.[1] A computer scientist specializes in the theory of computation and the design of computational systems.</p>
-              <p><a class="btn btn-primary btn-lg">GoTo Wiki</a></p>
-    		</div>
+    	<div id="mainScreen" class="col-md-10">        	                     
+            <div id="fs" class="jumbotron">
+           	 <h6 id="icon-record" hidden='true' style="position:fixed; top:0%; right:90% ; "><span class="glyphicon glyphicon-record" style="color:#FF0004"><img src="ajax-loader.gif"></span></h6>
+                       	  <h1 id="slide-title">Welcome</h1>
+                          <h4 id="slide-punc"></h4>
+                          <p id="slide-expen">Welcome to use Magic Slide Show -- A instant slide show that generate instant PPT and word list for speech listener</p>
+                          <p ><a id = "slide-link" class="btn btn-primary btn-lg">GoTo Wiki</a></p>
+                                          
+	   		</div>
         </div>
         <!-- Word List  -->
-        <div id="wordList" class="col-md-2">
+        <div  class="col-md-2">
         <div class="panel panel-default">
               
-              <div class="panel-heading">Word Lists</div>            
+              <div class="panel-heading">Word Lists<a style="float:right;" class="btn"id="all">ALL</a></div>            
               
-              <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+              <ul class="list-group" id="wordList">
+                <li class="list-group-item">Alogrithm</li>
               </ul>
             </div>
         </div>
     </div>
     <!-- Control panel -->
+    
+     <p ><small>Press  <span class="label label-default">f</span> to full screen and  <span class="label label-default">ENTER&crarr;</span> to exit full screen</small></p>
+     <hr>
     <div class="row">
     	<div class="col-md-1">
         	<h4>Control</h4>
         </div>
     	<div class="col-md-3">
         	
-        	<p><a class="btn btn-success btn-lg">Start</a></p>
+        	<p ><a id="btn" class="btn btn-success btn-lg">Start</a></p>
         </div>
     </div>
     <!-- footer  !-->
@@ -92,3 +91,11 @@
     </div>
 </div>
 </body>
+<script>
+
+</script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="speech.js"></script>
+<script src="wordProc.js"></script>
+<script src="UI.js"></script>

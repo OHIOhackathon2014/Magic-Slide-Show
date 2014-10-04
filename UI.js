@@ -71,7 +71,7 @@ function createEmail() {
   window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
 }
 
-/* Share to other social media */
+/* Share to other social media 
 function shareButton() {
     if(recognizing) {
 	share_media = true; //Change the value of share_media
@@ -85,8 +85,8 @@ function shareButton() {
     share_info.style.display = 'inline-block';
     showInfo('');    
 }
-
-/*Share to media function */
+/*
+/*Share to media function 
 function share2Media() {
     var n = final_transcript.indexOf('\n');
     if( n<0 || n>=80 ) {
@@ -147,7 +147,8 @@ function showInfo(s) {
   } else {
     info.style.visibility = 'hidden';
   }
-}*/
+}
+*/
 /* init variable and action*/
 var wordList = [];
 var isRecording = false;

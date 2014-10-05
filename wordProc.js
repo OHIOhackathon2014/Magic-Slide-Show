@@ -10,7 +10,7 @@ var words=["computer science"];
 var explanations=["Computer science is the scientific and practical approach to computation and its applications."]
 var links=["http://en.wikipedia.org/wiki/Computer_science"];
 /* data  */
-words[p]="electronic engineering";
+words[p]="electrical engineering";
 explanations[p]=["Electronics engineering, or electronic engineering, is an engineering discipline where non-linear and active electrical components such as electron tubes, and semiconductor devices."]
 links[p++]="http://en.wikipedia.org/wiki/Electrical_engineering";
 
